@@ -6,8 +6,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <title>Marketing</title>
-  <link rel="icon" href="img/logo.png" type="image/png" />
+  <title>AutoLearn</title>
+  <link rel="icon" href="ico.png" type="image/png" />
 
   <link rel="stylesheet" href="css/bootstrap1.min.css" />
 
@@ -45,7 +45,7 @@
 <body class="crm_body_bg">
   <nav class="sidebar vertical-scroll ps-container ps-theme-default ps-active-y">
     <div class="logo d-flex justify-content-between">
-      <a href="index.html"><img src="img/logo.png" alt /></a>
+      <a href="index.html"><img src="ico.png" alt /></a>
       <div class="sidebar_close_icon d-lg-none">
         <i class="ti-close"></i>
       </div>
@@ -70,7 +70,6 @@
           <span>App</span>
         </a>
         <ul>
-          <li><a href="?page=calendar">calender</a></li>
           <li><a href="?page=editor">editor</a></li>
           <li><a href="?page=chat">Chat</a></li>
           <li><a href="?page=faq">FAQ</a></li>
@@ -276,9 +275,12 @@
               <input type="text" name="str" required class="form-control" placeholder="Write your message" aria-label="Recipient's username" aria-describedby="basic-addon2" />
             </form>
             <?php
-            $psn = mysqli_real_escape_string($koneksi, $_POST['str']);
-            $pesan = "INSERT INTO tanya(id_tanya,pesan,tanggal) VALUES('','$psn',now())";
-            $query = mysqli_query($koneksi, $pesan);
+            if (isset($_POST['str']) == null) {
+            } else {
+              $psn = mysqli_real_escape_string($koneksi, $_POST['str']);
+              $pesan = "INSERT INTO tanya(id_tanya,pesan,tanggal) VALUES('','$psn',now())";
+              $query = mysqli_query($koneksi, $pesan);
+            }
             ?>
             <div class="input-group-append">
               <button class="btn" type="button">
@@ -301,15 +303,23 @@
     <div class="CHAT_POPUP_BODY">
       <?php $sql = "SELECT * FROM tanya ORDER BY id_tanya DESC";
       $query = mysqli_query($koneksi, $sql);
-      $data = mysqli_fetch_array($query) ?>
-      <p class="mesaged_send_date"><?= $data['tanggal']; ?></p>
+      $data = mysqli_fetch_array($query);
+      if (isset($data['tanggal']) == null) {
+      } else {
+      ?>
+        <p class="mesaged_send_date"><?= $data['tanggal']; ?></p>
+      <?php } ?>
       <div class="CHATING_SENDER CHATING_RECEIVEr">
         <div class="SEND_SMS_VIEW">
           <?php
           $sql = "SELECT * FROM tanya ORDER BY id_tanya DESC LIMIT 1";
           $query = mysqli_query($koneksi, $sql);
-          $data = mysqli_fetch_array($query) ?>
-          <p><?= $data['pesan']; ?></p>
+          $data = mysqli_fetch_array($query);
+          if (isset($data['pesan']) == null) {
+          } else {
+          ?>
+            <p><?= $data['pesan']; ?></p>
+          <?php } ?>
         </div>
         <div class="SMS_thumb">
           <img src="img/staf/1.png" alt />
@@ -321,7 +331,10 @@
         </div>
         <div class="SEND_SMS_VIEW">
           <p><?php include('openai.php');
-              echo $result['choices'][0]['text'];
+              if (isset($result['choices'][0]['text']) == null) {
+              } else {
+                echo $result['choices'][0]['text'];
+              }
               ?></p>
         </div>
       </div>

@@ -6,7 +6,7 @@
           <div class="row">
             <div class="col-lg-6">
               <div class="dashboard_header_title">
-                <h3>Editor</h3>
+                <h3>Text Editor</h3>
               </div>
             </div>
             <div class="col-lg-6">

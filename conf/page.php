@@ -5,9 +5,6 @@ if (isset($_GET['page'])) {
         case 'index':
             include 'pages/dashboard.php';
             break;
-        case 'calendar':
-            include 'pages/calendar.php';
-            break;
         case 'editor':
             include 'pages/editor.php';
             break;
@@ -36,5 +33,5 @@ if (isset($_GET['page'])) {
             break;
     }
 } else {
-    include "pages/dashboard.php";
+    include "pages/dashboardd.php";
 }
