@@ -1,527 +1,776 @@
-<div class="container-fluid py-4">
-  <div class="row">
-    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-      <div class="card">
-        <div class="card-body p-3">
-          <div class="row">
-            <div class="col-8">
-              <div class="numbers">
-                <p class="text-sm mb-0 text-uppercase font-weight-bold">
-                  Today's Money
-                </p>
-                <h5 class="font-weight-bolder">$53,000</h5>
-                <p class="mb-0">
-                  <span class="text-success text-sm font-weight-bolder">+55%</span>
-                  since yesterday
-                </p>
+<div class="main_content_iner">
+      <div class="container-fluid p-0">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="single_element">
+              <div class="quick_activity">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="quick_activity_wrap">
+                      <div class="single_quick_activity">
+                        <div class="count_content">
+                          <p>Revenue</p>
+                          <h3>$<span class="counter">35000</span></h3>
+                        </div>
+                        <a href="#" class="notification_btn">Today</a>
+                        <div id="bar1" class="barfiller">
+                          <div class="tipWrap">
+                            <span class="tip"></span>
+                          </div>
+                          <span class="fill" data-percentage="95"></span>
+                        </div>
+                      </div>
+
+                      <div class="single_quick_activity">
+                        <div class="count_content">
+                          <p>Orders</p>
+                          <h3><span class="counter">35000</span></h3>
+                        </div>
+                        <a href="#" class="notification_btn yellow_btn">This Week</a>
+                        <div id="bar2" class="barfiller">
+                          <div class="tipWrap">
+                            <span class="tip"></span>
+                          </div>
+                          <span class="fill" data-percentage="65"></span>
+                        </div>
+                      </div>
+
+                      <div class="single_quick_activity">
+                        <div class="count_content">
+                          <p>Leads</p>
+                          <h3>$<span class="counter">50000</span></h3>
+                        </div>
+                        <a href="#" class="notification_btn green_btn">This Month</a>
+                        <div id="bar3" class="barfiller">
+                          <div class="tipWrap">
+                            <span class="tip"></span>
+                          </div>
+                          <span class="fill" data-percentage="75"></span>
+                        </div>
+                      </div>
+
+                      <div class="single_quick_activity">
+                        <div class="count_content">
+                          <p>Lead Conversion Rate</p>
+                          <h3><span class="counter">50</span> %</h3>
+                        </div>
+                        <a href="#" class="notification_btn violate_btn">Anual</a>
+                        <div id="bar4" class="barfiller">
+                          <div class="tipWrap">
+                            <span class="tip"></span>
+                          </div>
+                          <span class="fill" data-percentage="85"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-4 text-end">
-              <div class="icon icon-shape bg-gradient-primary shadow-primary text-center rounded-circle">
-                <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
+          </div>
+          <div class="col-lg-8">
+            <div class="white_card card_height_100 mb_30">
+              <div class="white_card_header">
+                <div class="box_header m-0">
+                  <div class="main-title">
+                    <h3 class="m-0">Payment History</h3>
+                  </div>
+                  <div class="header_more_tool">
+                    <div class="dropdown">
+                      <span class="dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                        <i class="ti-more-alt"></i>
+                      </span>
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">
+                          <i class="ti-eye"></i> Action</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="ti-trash"></i> Delete</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fas fa-edit"></i> Edit</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="ti-printer"></i> Print</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fa fa-download"></i> Download</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="white_card_body p-0">
+                <div id="iq-chart-order" style="height: 400px; position: relative"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="white_card card_height_100 mb_30">
+              <div class="white_card_header">
+                <div class="box_header m-0">
+                  <div class="main-title">
+                    <h3 class="m-0">1 United States Dollar Equals</h3>
+                  </div>
+                  <div class="header_more_tool">
+                    <div class="dropdown">
+                      <span class="dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                        <i class="ti-more-alt"></i>
+                      </span>
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">
+                          <i class="ti-eye"></i> Action</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="ti-trash"></i> Delete</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fas fa-edit"></i> Edit</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="ti-printer"></i> Print</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fa fa-download"></i> Download</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="white_card_body">
+                <div class="equal_hdr mb_15 d-flex justify-content-between align-items-center flex-wrap">
+                  <h4 class="f_s_28 f_w_700">0.50 Euro</h4>
+                  <a href="#" class="Euro_btn">Euro</a>
+                </div>
+                <p class="color_gray f_s_14 f_w_700 mb_15">
+                  24 Apr 6.00 am UTC Declaration
+                </p>
+                <div class="grid_4rap">
+                  <div class="single_wrap_input">
+                    <div class="common_input">
+                      <input type="text" placeholder="1" />
+                    </div>
+                  </div>
+                  <div class="single_wrap_input">
+                    <select class="nice_Select2 wide" name id>
+                      <option value="1">United State</option>
+                      <option value="1">United State</option>
+                    </select>
+                  </div>
+                  <div class="single_wrap_input">
+                    <div class="common_input">
+                      <input type="text" placeholder="1" />
+                    </div>
+                  </div>
+                  <div class="single_wrap_input">
+                    <select class="nice_Select2 wide" name id>
+                      <option value="1">Euro</option>
+                      <option value="1">Euro</option>
+                    </select>
+                  </div>
+                </div>
+                <div id="area-spaline"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="white_card mb_30">
+              <div class="white_card_header">
+                <div class="box_header m-0">
+                  <div class="main-title">
+                    <h3 class="m-0">Payment History</h3>
+                  </div>
+                  <div class="header_more_tool">
+                    <div class="dropdown">
+                      <span class="dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                        <i class="ti-more-alt"></i>
+                      </span>
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">
+                          <i class="ti-eye"></i> Action</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="ti-trash"></i> Delete</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fas fa-edit"></i> Edit</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="ti-printer"></i> Print</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fa fa-download"></i> Download</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="white_card_body">
+                <div class="table-responsive">
+                  <table class="table bayer_table m-0">
+                    <tbody>
+                      <tr style="border: hidden">
+                        <td>
+                          <img class="byder_thumb" src="img/Payment/1.png" alt />
+                        </td>
+                        <td>
+                          <div class="payment_gatway">
+                            <h5 class="byer_name f_s_16 f_w_700 color_theme">
+                              Deposit PayPal
+                            </h5>
+                            <p class="color_gray f_s_12 f_w_700">
+                              5 march, 18:33
+                            </p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="payment_gatway text-end">
+                            <h5 class="byer_name f_s_16 f_w_700 color_theme">
+                              +2000
+                            </h5>
+                            <p class="color_gray f_s_12 f_w_700">EUR</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr style="border: hidden">
+                        <td>
+                          <img class="byder_thumb" src="img/Payment/2.png" alt />
+                        </td>
+                        <td>
+                          <div class="payment_gatway">
+                            <h5 class="byer_name f_s_16 f_w_700 color_theme">
+                              Deposit PayPal
+                            </h5>
+                            <p class="color_gray f_s_12 f_w_700">
+                              5 march, 18:33
+                            </p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="payment_gatway text-end">
+                            <h5 class="byer_name f_s_16 f_w_700 color_theme">
+                              +2000
+                            </h5>
+                            <p class="color_gray f_s_12 f_w_700">EUR</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr style="border: hidden">
+                        <td>
+                          <img class="byder_thumb" src="img/Payment/3.png" alt />
+                        </td>
+                        <td>
+                          <div class="payment_gatway">
+                            <h5 class="byer_name f_s_16 f_w_700 color_theme">
+                              Deposit from Bank
+                            </h5>
+                            <p class="color_gray f_s_12 f_w_700">
+                              5 march, 18:33
+                            </p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="payment_gatway text-end">
+                            <h5 class="byer_name f_s_16 f_w_700 color_theme">
+                              +2000
+                            </h5>
+                            <p class="color_gray f_s_12 f_w_700">EUR</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr style="border: hidden">
+                        <td>
+                          <img class="byder_thumb" src="img/Payment/4.png" alt />
+                        </td>
+                        <td>
+                          <div class="payment_gatway">
+                            <h5 class="byer_name f_s_16 f_w_700 color_theme">
+                              Cancelled
+                            </h5>
+                            <p class="color_gray f_s_12 f_w_700">
+                              5 march, 18:33
+                            </p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="payment_gatway text-end">
+                            <h5 class="byer_name f_s_16 f_w_700 color_theme">
+                              +2000
+                            </h5>
+                            <p class="color_gray f_s_12 f_w_700">EUR</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr style="border: hidden">
+                        <td>
+                          <img class="byder_thumb" src="img/Payment/5.png" alt />
+                        </td>
+                        <td>
+                          <div class="payment_gatway">
+                            <h5 class="byer_name f_s_16 f_w_700 color_theme">
+                              Deposit from Bank
+                            </h5>
+                            <p class="color_gray f_s_12 f_w_700">
+                              5 march, 18:33
+                            </p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="payment_gatway text-end">
+                            <h5 class="byer_name f_s_16 f_w_700 color_theme">
+                              +2000
+                            </h5>
+                            <p class="color_gray f_s_12 f_w_700">EUR</p>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="white_card mb_30">
+              <div class="white_card_header">
+                <div class="box_header m-0">
+                  <div class="main-title">
+                    <h3 class="m-0">Monthly Invoices</h3>
+                  </div>
+                  <div class="header_more_tool">
+                    <div class="dropdown">
+                      <span class="dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                        <i class="ti-more-alt"></i>
+                      </span>
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">
+                          <i class="ti-eye"></i> Action</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="ti-trash"></i> Delete</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fas fa-edit"></i> Edit</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="ti-printer"></i> Print</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fa fa-download"></i> Download</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="white_card_body">
+                <div class="table-responsive">
+                  <table class="table bayer_table2 m-0">
+                    <tbody>
+                      <tr>
+                        <td class="w_70">
+                          <img class="byder_thumb wh_56" src="img/Payment/check_1.png" alt />
+                        </td>
+                        <td>
+                          <div class="payment_gatway">
+                            <h5 class="byer_name f_s_16 f_w_700 color_theme">
+                              Deposit PayPal
+                            </h5>
+                            <p class="color_gray f_s_12 f_w_700">
+                              5 march, 18:33
+                            </p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="payment_gatway text-end">
+                            <h5 class="byer_name f_s_16 f_w_700 color_theme">
+                              +2000
+                            </h5>
+                            <p class="color_gray f_s_12 f_w_700">EUR</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img class="byder_thumb wh_56" src="img/Payment/check_2.png" alt />
+                        </td>
+                        <td>
+                          <div class="payment_gatway">
+                            <h5 class="byer_name f_s_16 f_w_700 color_theme">
+                              Deposit PayPal
+                            </h5>
+                            <p class="color_gray f_s_12 f_w_700">
+                              5 march, 18:33
+                            </p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="payment_gatway text-end">
+                            <h5 class="byer_name f_s_16 f_w_700 color_theme">
+                              +2000
+                            </h5>
+                            <p class="color_gray f_s_12 f_w_700">EUR</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img class="byder_thumb wh_56" src="img/Payment/check_3.png" alt />
+                        </td>
+                        <td>
+                          <div class="payment_gatway">
+                            <h5 class="byer_name f_s_16 f_w_700 color_theme">
+                              Deposit from Bank
+                            </h5>
+                            <p class="color_gray f_s_12 f_w_700">
+                              5 march, 18:33
+                            </p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="payment_gatway text-end">
+                            <h5 class="byer_name f_s_16 f_w_700 color_theme">
+                              +2000
+                            </h5>
+                            <p class="color_gray f_s_12 f_w_700">EUR</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img class="byder_thumb wh_56" src="img/Payment/check_4.png" alt />
+                        </td>
+                        <td>
+                          <div class="payment_gatway">
+                            <h5 class="byer_name f_s_16 f_w_700 color_theme">
+                              Cancelled
+                            </h5>
+                            <p class="color_gray f_s_12 f_w_700">
+                              5 march, 18:33
+                            </p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="payment_gatway text-end">
+                            <h5 class="byer_name f_s_16 f_w_700 color_theme">
+                              +2000
+                            </h5>
+                            <p class="color_gray f_s_12 f_w_700">EUR</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img class="byder_thumb wh_56" src="img/Payment/check_5.png" alt />
+                        </td>
+                        <td>
+                          <div class="payment_gatway">
+                            <h5 class="byer_name f_s_16 f_w_700 color_theme">
+                              Deposit from Bank
+                            </h5>
+                            <p class="color_gray f_s_12 f_w_700">
+                              5 march, 18:33
+                            </p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="payment_gatway text-end">
+                            <h5 class="byer_name f_s_16 f_w_700 color_theme">
+                              +2000
+                            </h5>
+                            <p class="color_gray f_s_12 f_w_700">EUR</p>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="white_card mb_30">
+              <div class="white_card_header">
+                <div class="box_header m-0">
+                  <div class="main-title">
+                    <h3 class="m-0">Social Media</h3>
+                  </div>
+                  <div class="header_more_tool">
+                    <div class="dropdown">
+                      <span class="dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                        <i class="ti-more-alt"></i>
+                      </span>
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">
+                          <i class="ti-eye"></i> Action</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="ti-trash"></i> Delete</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fas fa-edit"></i> Edit</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="ti-printer"></i> Print</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fa fa-download"></i> Download</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="white_card_body">
+                <div class="row">
+                  <div class="col-xl-6">
+                    <div class="single_social_media d-flex align-items-center">
+                      <div class="icon_media">
+                        <i class="fab fa-facebook-f"></i>
+                      </div>
+                      <div class="media_contet">
+                        <span>Folower</span>
+                        <h4>35000</h4>
+                      </div>
+                    </div>
+                    <div class="single_social_media d-flex align-items-center">
+                      <div class="icon_media twitter_bg">
+                        <i class="fab fa-twitter"></i>
+                      </div>
+                      <div class="media_contet">
+                        <span>Folower</span>
+                        <h4>2500</h4>
+                      </div>
+                    </div>
+                    <div class="single_social_media d-flex align-items-center">
+                      <div class="icon_media youtube_bg">
+                        <i class="fab fa-youtube"></i>
+                      </div>
+                      <div class="media_contet">
+                        <span>Folower</span>
+                        <h4>1.7M</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-6">
+                    <div class="single_social_media d-flex align-items-center">
+                      <div class="icon_media insta_bg">
+                        <i class="fab fa-instagram"></i>
+                      </div>
+                      <div class="media_contet">
+                        <span>Folower</span>
+                        <h4>35000</h4>
+                      </div>
+                    </div>
+                    <div class="single_social_media d-flex align-items-center">
+                      <img class="img-fluid" src="img/plane.png" alt />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="white_card mb_30">
+              <div class="white_card_header">
+                <div class="box_header m-0">
+                  <div class="main-title">
+                    <h3 class="m-0">Recent Activity</h3>
+                  </div>
+                  <div class="header_more_tool">
+                    <div class="dropdown">
+                      <span class="dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                        <i class="ti-more-alt"></i>
+                      </span>
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">
+                          <i class="ti-eye"></i> Action</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="ti-trash"></i> Delete</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fas fa-edit"></i> Edit</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="ti-printer"></i> Print</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fa fa-download"></i> Download</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="white_card_body">
+                <div id="iq-chart-efficient" style="height: 250px; position: relative"></div>
+              </div>
+            </div>
+            <div class="white_card mb_30">
+              <div class="white_card_header">
+                <div class="box_header m-0">
+                  <div class="main-title">
+                    <h3 class="m-0">Recent Activity</h3>
+                  </div>
+                  <div class="header_more_tool">
+                    <div class="dropdown">
+                      <span class="dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                        <i class="ti-more-alt"></i>
+                      </span>
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">
+                          <i class="ti-eye"></i> Action</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="ti-trash"></i> Delete</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fas fa-edit"></i> Edit</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="ti-printer"></i> Print</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fa fa-download"></i> Download</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="white_card_body">
+                <div class="Activity_timeline">
+                  <ul>
+                    <li>
+                      <div class="activity_bell"></div>
+                      <div class="timeLine_inner d-flex align-items-center">
+                        <div class="activity_wrap d-flex">
+                          <h6 class="nowrap">5 min ago</h6>
+                          <p>Lorem ipsum dolor sit amet, consectetur</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="activity_bell"></div>
+                      <div class="timeLine_inner d-flex align-items-center">
+                        <div class="activity_wrap d-flex">
+                          <h6 class="nowrap">5 min ago</h6>
+                          <p>Lorem ipsum dolor sit amet, consectetur</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="activity_bell"></div>
+                      <div class="timeLine_inner d-flex align-items-center">
+                        <div class="activity_wrap d-flex">
+                          <h6 class="nowrap">5 min ago</h6>
+                          <p>Lorem ipsum dolor sit amet, consectetur</p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="white_card card_height_100 mb_30 QA_section">
+              <div class="white_card_header">
+                <div class="box_header m-0">
+                  <div class="main-title">
+                    <h3 class="m-0">Monthly Invoices</h3>
+                  </div>
+                  <div class="header_more_tool">
+                    <div class="dropdown">
+                      <span class="dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                        <i class="ti-more-alt"></i>
+                      </span>
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">
+                          <i class="ti-eye"></i> Action</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="ti-trash"></i> Delete</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fas fa-edit"></i> Edit</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="ti-printer"></i> Print</a>
+                        <a class="dropdown-item" href="#">
+                          <i class="fa fa-download"></i> Download</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="white_card_body">
+                <div class="QA_table table-responsive">
+                  <table class="table pt-0">
+                    <thead>
+                      <tr>
+                        <th scope="col">Profile</th>
+                        <th scope="col">Activity Type</th>
+                        <th scope="col">Owner</th>
+                        <th scope="col">Task</th>
+                        <th scope="col">Budget</th>
+                        <th scope="col">Priority</th>
+                        <th scope="col">Period</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Deadline</th>
+                        <th scope="col">Attachment</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <img class="user_thumb" src="img/invoice_img/man_1.png" alt />
+                        </td>
+                        <td>Product</td>
+                        <td class="nowrap">Tom Smitn</td>
+                        <td class="nowrap">Client data test</td>
+                        <td>$125000</td>
+                        <td>High</td>
+                        <td>Oct</td>
+                        <td>
+                          <img class="check_status" src="img/invoice_img/check.png" alt />
+                        </td>
+                        <td>25/10/2020</td>
+                        <td><button class="btn_1">PDF</button></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img class="user_thumb" src="img/invoice_img/man_2.png" alt />
+                        </td>
+                        <td>Product</td>
+                        <td class="nowrap">Tom Smitn</td>
+                        <td class="nowrap">Client data test</td>
+                        <td>$125000</td>
+                        <td>High</td>
+                        <td>Oct</td>
+                        <td>
+                          <img class="check_status" src="img/invoice_img/check.png" alt />
+                        </td>
+                        <td>25/10/2020</td>
+                        <td><button class="btn_1">PDF</button></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img class="user_thumb" src="img/invoice_img/man_3.png" alt />
+                        </td>
+                        <td>Product</td>
+                        <td class="nowrap">Tom Smitn</td>
+                        <td class="nowrap">Client data test</td>
+                        <td>$125000</td>
+                        <td>High</td>
+                        <td>Oct</td>
+                        <td>
+                          <img class="check_status" src="img/invoice_img/check.png" alt />
+                        </td>
+                        <td>25/10/2020</td>
+                        <td><button class="btn_1">PDF</button></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img class="user_thumb" src="img/invoice_img/man_4.png" alt />
+                        </td>
+                        <td>Product</td>
+                        <td class="nowrap">Tom Smitn</td>
+                        <td class="nowrap">Client data test</td>
+                        <td>$125000</td>
+                        <td>High</td>
+                        <td>Oct</td>
+                        <td>
+                          <img class="check_status" src="img/invoice_img/close.png" alt />
+                        </td>
+                        <td>25/10/2020</td>
+                        <td><button class="btn_1">PDF</button></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img class="user_thumb" src="img/invoice_img/man_5.png" alt />
+                        </td>
+                        <td>Product</td>
+                        <td class="nowrap">Tom Smitn</td>
+                        <td class="nowrap">Client data test</td>
+                        <td>$125000</td>
+                        <td>High</td>
+                        <td>Oct</td>
+                        <td>
+                          <img class="check_status" src="img/invoice_img/close.png" alt />
+                        </td>
+                        <td>25/10/2020</td>
+                        <td><button class="btn_1">PDF</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-      <div class="card">
-        <div class="card-body p-3">
-          <div class="row">
-            <div class="col-8">
-              <div class="numbers">
-                <p class="text-sm mb-0 text-uppercase font-weight-bold">
-                  Today's Users
-                </p>
-                <h5 class="font-weight-bolder">2,300</h5>
-                <p class="mb-0">
-                  <span class="text-success text-sm font-weight-bolder">+3%</span>
-                  since last week
-                </p>
-              </div>
-            </div>
-            <div class="col-4 text-end">
-              <div class="icon icon-shape bg-gradient-danger shadow-danger text-center rounded-circle">
-                <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-      <div class="card">
-        <div class="card-body p-3">
-          <div class="row">
-            <div class="col-8">
-              <div class="numbers">
-                <p class="text-sm mb-0 text-uppercase font-weight-bold">
-                  New Clients
-                </p>
-                <h5 class="font-weight-bolder">+3,462</h5>
-                <p class="mb-0">
-                  <span class="text-danger text-sm font-weight-bolder">-2%</span>
-                  since last quarter
-                </p>
-              </div>
-            </div>
-            <div class="col-4 text-end">
-              <div class="icon icon-shape bg-gradient-success shadow-success text-center rounded-circle">
-                <i class="ni ni-paper-diploma text-lg opacity-10" aria-hidden="true"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-xl-3 col-sm-6">
-      <div class="card">
-        <div class="card-body p-3">
-          <div class="row">
-            <div class="col-8">
-              <div class="numbers">
-                <p class="text-sm mb-0 text-uppercase font-weight-bold">
-                  Sales
-                </p>
-                <h5 class="font-weight-bolder">$103,430</h5>
-                <p class="mb-0">
-                  <span class="text-success text-sm font-weight-bolder">+5%</span>
-                  than last month
-                </p>
-              </div>
-            </div>
-            <div class="col-4 text-end">
-              <div class="icon icon-shape bg-gradient-warning shadow-warning text-center rounded-circle">
-                <i class="ni ni-cart text-lg opacity-10" aria-hidden="true"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row mt-4">
-    <div class="col-lg-7 mb-lg-0 mb-4">
-      <div class="card z-index-2 h-100">
-        <div class="card-header pb-0 pt-3 bg-transparent">
-          <h6 class="text-capitalize">Sales overview</h6>
-          <p class="text-sm mb-0">
-            <i class="fa fa-arrow-up text-success"></i>
-            <span class="font-weight-bold">4% more</span> in 2021
-          </p>
-        </div>
-        <div class="card-body p-3">
-          <div class="chart">
-            <canvas id="chart-line" class="chart-canvas" height="300"></canvas>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-5">
-      <div class="card card-carousel overflow-hidden h-100 p-0">
-        <div id="carouselExampleCaptions" class="carousel slide h-100" data-bs-ride="carousel">
-          <div class="carousel-inner border-radius-lg h-100">
-            <div class="carousel-item h-100 active" style="
-                      background-image: url('./assets/img/carousel-1.jpg');
-                      background-size: cover;
-                    ">
-              <div class="carousel-caption d-none d-md-block bottom-0 text-start start-0 ms-5">
-                <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
-                  <i class="ni ni-camera-compact text-dark opacity-10"></i>
-                </div>
-                <h5 class="text-white mb-1">Get started with Argon</h5>
-                <p>
-                  There’s nothing I really wanted to do in life that I
-                  wasn’t able to get good at.
-                </p>
-              </div>
-            </div>
-            <div class="carousel-item h-100" style="
-                      background-image: url('./assets/img/carousel-2.jpg');
-                      background-size: cover;
-                    ">
-              <div class="carousel-caption d-none d-md-block bottom-0 text-start start-0 ms-5">
-                <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
-                  <i class="ni ni-bulb-61 text-dark opacity-10"></i>
-                </div>
-                <h5 class="text-white mb-1">
-                  Faster way to create web pages
-                </h5>
-                <p>
-                  That’s my skill. I’m not really specifically talented at
-                  anything except for the ability to learn.
-                </p>
-              </div>
-            </div>
-            <div class="carousel-item h-100" style="
-                      background-image: url('./assets/img/carousel-3.jpg');
-                      background-size: cover;
-                    ">
-              <div class="carousel-caption d-none d-md-block bottom-0 text-start start-0 ms-5">
-                <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
-                  <i class="ni ni-trophy text-dark opacity-10"></i>
-                </div>
-                <h5 class="text-white mb-1">
-                  Share with us your design tips!
-                </h5>
-                <p>
-                  Don’t be afraid to be wrong because you can’t learn
-                  anything from a compliment.
-                </p>
-              </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev w-5 me-3" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next w-5 me-3" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row mt-4">
-    <div class="col-lg-7 mb-lg-0 mb-4">
-      <div class="card">
-        <div class="card-header pb-0 p-3">
-          <div class="d-flex justify-content-between">
-            <h6 class="mb-2">Sales by Country</h6>
-          </div>
-        </div>
-        <div class="table-responsive">
-          <table class="table align-items-center">
-            <tbody>
-              <tr>
-                <td class="w-30">
-                  <div class="d-flex px-2 py-1 align-items-center">
-                    <div>
-                      <img src="./assets/img/icons/flags/US.png" alt="Country flag" />
-                    </div>
-                    <div class="ms-4">
-                      <p class="text-xs font-weight-bold mb-0">
-                        Country:
-                      </p>
-                      <h6 class="text-sm mb-0">United States</h6>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div class="text-center">
-                    <p class="text-xs font-weight-bold mb-0">Sales:</p>
-                    <h6 class="text-sm mb-0">2500</h6>
-                  </div>
-                </td>
-                <td>
-                  <div class="text-center">
-                    <p class="text-xs font-weight-bold mb-0">Value:</p>
-                    <h6 class="text-sm mb-0">$230,900</h6>
-                  </div>
-                </td>
-                <td class="align-middle text-sm">
-                  <div class="col text-center">
-                    <p class="text-xs font-weight-bold mb-0">Bounce:</p>
-                    <h6 class="text-sm mb-0">29.9%</h6>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td class="w-30">
-                  <div class="d-flex px-2 py-1 align-items-center">
-                    <div>
-                      <img src="./assets/img/icons/flags/DE.png" alt="Country flag" />
-                    </div>
-                    <div class="ms-4">
-                      <p class="text-xs font-weight-bold mb-0">
-                        Country:
-                      </p>
-                      <h6 class="text-sm mb-0">Germany</h6>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div class="text-center">
-                    <p class="text-xs font-weight-bold mb-0">Sales:</p>
-                    <h6 class="text-sm mb-0">3.900</h6>
-                  </div>
-                </td>
-                <td>
-                  <div class="text-center">
-                    <p class="text-xs font-weight-bold mb-0">Value:</p>
-                    <h6 class="text-sm mb-0">$440,000</h6>
-                  </div>
-                </td>
-                <td class="align-middle text-sm">
-                  <div class="col text-center">
-                    <p class="text-xs font-weight-bold mb-0">Bounce:</p>
-                    <h6 class="text-sm mb-0">40.22%</h6>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td class="w-30">
-                  <div class="d-flex px-2 py-1 align-items-center">
-                    <div>
-                      <img src="./assets/img/icons/flags/GB.png" alt="Country flag" />
-                    </div>
-                    <div class="ms-4">
-                      <p class="text-xs font-weight-bold mb-0">
-                        Country:
-                      </p>
-                      <h6 class="text-sm mb-0">Great Britain</h6>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div class="text-center">
-                    <p class="text-xs font-weight-bold mb-0">Sales:</p>
-                    <h6 class="text-sm mb-0">1.400</h6>
-                  </div>
-                </td>
-                <td>
-                  <div class="text-center">
-                    <p class="text-xs font-weight-bold mb-0">Value:</p>
-                    <h6 class="text-sm mb-0">$190,700</h6>
-                  </div>
-                </td>
-                <td class="align-middle text-sm">
-                  <div class="col text-center">
-                    <p class="text-xs font-weight-bold mb-0">Bounce:</p>
-                    <h6 class="text-sm mb-0">23.44%</h6>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td class="w-30">
-                  <div class="d-flex px-2 py-1 align-items-center">
-                    <div>
-                      <img src="./assets/img/icons/flags/BR.png" alt="Country flag" />
-                    </div>
-                    <div class="ms-4">
-                      <p class="text-xs font-weight-bold mb-0">
-                        Country:
-                      </p>
-                      <h6 class="text-sm mb-0">Brasil</h6>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div class="text-center">
-                    <p class="text-xs font-weight-bold mb-0">Sales:</p>
-                    <h6 class="text-sm mb-0">562</h6>
-                  </div>
-                </td>
-                <td>
-                  <div class="text-center">
-                    <p class="text-xs font-weight-bold mb-0">Value:</p>
-                    <h6 class="text-sm mb-0">$143,960</h6>
-                  </div>
-                </td>
-                <td class="align-middle text-sm">
-                  <div class="col text-center">
-                    <p class="text-xs font-weight-bold mb-0">Bounce:</p>
-                    <h6 class="text-sm mb-0">32.14%</h6>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-5">
-      <div class="card">
-        <div class="card-header pb-0 p-3">
-          <h6 class="mb-0">Categories</h6>
-        </div>
-        <div class="card-body p-3">
-          <ul class="list-group">
-            <li class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
-              <div class="d-flex align-items-center">
-                <div class="icon icon-shape icon-sm me-3 bg-gradient-dark shadow text-center">
-                  <i class="ni ni-mobile-button text-white opacity-10"></i>
-                </div>
-                <div class="d-flex flex-column">
-                  <h6 class="mb-1 text-dark text-sm">Devices</h6>
-                  <span class="text-xs">250 in stock,
-                    <span class="font-weight-bold">346+ sold</span></span>
-                </div>
-              </div>
-              <div class="d-flex">
-                <button class="btn btn-link btn-icon-only btn-rounded btn-sm text-dark icon-move-right my-auto">
-                  <i class="ni ni-bold-right" aria-hidden="true"></i>
-                </button>
-              </div>
-            </li>
-            <li class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
-              <div class="d-flex align-items-center">
-                <div class="icon icon-shape icon-sm me-3 bg-gradient-dark shadow text-center">
-                  <i class="ni ni-tag text-white opacity-10"></i>
-                </div>
-                <div class="d-flex flex-column">
-                  <h6 class="mb-1 text-dark text-sm">Tickets</h6>
-                  <span class="text-xs">123 closed,
-                    <span class="font-weight-bold">15 open</span></span>
-                </div>
-              </div>
-              <div class="d-flex">
-                <button class="btn btn-link btn-icon-only btn-rounded btn-sm text-dark icon-move-right my-auto">
-                  <i class="ni ni-bold-right" aria-hidden="true"></i>
-                </button>
-              </div>
-            </li>
-            <li class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
-              <div class="d-flex align-items-center">
-                <div class="icon icon-shape icon-sm me-3 bg-gradient-dark shadow text-center">
-                  <i class="ni ni-box-2 text-white opacity-10"></i>
-                </div>
-                <div class="d-flex flex-column">
-                  <h6 class="mb-1 text-dark text-sm">Error logs</h6>
-                  <span class="text-xs">1 is active,
-                    <span class="font-weight-bold">40 closed</span></span>
-                </div>
-              </div>
-              <div class="d-flex">
-                <button class="btn btn-link btn-icon-only btn-rounded btn-sm text-dark icon-move-right my-auto">
-                  <i class="ni ni-bold-right" aria-hidden="true"></i>
-                </button>
-              </div>
-            </li>
-            <li class="list-group-item border-0 d-flex justify-content-between ps-0 border-radius-lg">
-              <div class="d-flex align-items-center">
-                <div class="icon icon-shape icon-sm me-3 bg-gradient-dark shadow text-center">
-                  <i class="ni ni-satisfied text-white opacity-10"></i>
-                </div>
-                <div class="d-flex flex-column">
-                  <h6 class="mb-1 text-dark text-sm">Happy users</h6>
-                  <span class="text-xs font-weight-bold">+ 430</span>
-                </div>
-              </div>
-              <div class="d-flex">
-                <button class="btn btn-link btn-icon-only btn-rounded btn-sm text-dark icon-move-right my-auto">
-                  <i class="ni ni-bold-right" aria-hidden="true"></i>
-                </button>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <footer class="footer pt-3">
-    <div class="container-fluid">
-      <div class="row align-items-center justify-content-lg-between">
-        <div class="col-lg-6 mb-lg-0 mb-4">
-          <div class="copyright text-center text-sm text-muted text-lg-start">
-            ©
-            <script>
-              document.write(new Date().getFullYear());
-            </script>
-            , made with <i class="fa fa-heart"></i> by
-            <a href="https://www.creative-tim.com" class="font-weight-bold" target="_blank">Creative Tim</a>
-            for a better web.
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <ul class="nav nav-footer justify-content-center justify-content-lg-end">
-            <li class="nav-item">
-              <a href="https://www.creative-tim.com" class="nav-link text-muted" target="_blank">Creative Tim</a>
-            </li>
-            <li class="nav-item">
-              <a href="https://www.creative-tim.com/presentation" class="nav-link text-muted" target="_blank">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a href="https://www.creative-tim.com/blog" class="nav-link text-muted" target="_blank">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a href="https://www.creative-tim.com/license" class="nav-link pe-0 text-muted" target="_blank">License</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-</div>
-</main>
-<div class="fixed-plugin">
-  <a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
-    <i class="fa fa-cog py-2"> </i>
-  </a>
-  <div class="card shadow-lg">
-    <div class="card-header pb-0 pt-3">
-      <div class="float-start">
-        <h5 class="mt-3 mb-0">Argon Configurator</h5>
-        <p>See our dashboard options.</p>
-      </div>
-      <div class="float-end mt-4">
-        <button class="btn btn-link text-dark p-0 fixed-plugin-close-button">
-          <i class="fa fa-close"></i>
-        </button>
-      </div>
-      <!-- End Toggle Button -->
-    </div>
-    <hr class="horizontal dark my-1" />
-    <div class="card-body pt-sm-3 pt-0 overflow-auto">
-      <!-- Sidebar Backgrounds -->
-      <div>
-        <h6 class="mb-0">Sidebar Colors</h6>
-      </div>
-      <a href="javascript:void(0)" class="switch-trigger background-color">
-        <div class="badge-colors my-2 text-start">
-          <span class="badge filter bg-gradient-primary active" data-color="primary" onclick="sidebarColor(this)"></span>
-          <span class="badge filter bg-gradient-dark" data-color="dark" onclick="sidebarColor(this)"></span>
-          <span class="badge filter bg-gradient-info" data-color="info" onclick="sidebarColor(this)"></span>
-          <span class="badge filter bg-gradient-success" data-color="success" onclick="sidebarColor(this)"></span>
-          <span class="badge filter bg-gradient-warning" data-color="warning" onclick="sidebarColor(this)"></span>
-          <span class="badge filter bg-gradient-danger" data-color="danger" onclick="sidebarColor(this)"></span>
-        </div>
-      </a>
-      <!-- Sidenav Type -->
-      <div class="mt-3">
-        <h6 class="mb-0">Sidenav Type</h6>
-        <p class="text-sm">Choose between 2 different sidenav types.</p>
-      </div>
-      <div class="d-flex">
-        <button class="btn bg-gradient-primary w-100 px-3 mb-2 active me-2" data-class="bg-white" onclick="sidebarType(this)">
-          White
-        </button>
-        <button class="btn bg-gradient-primary w-100 px-3 mb-2" data-class="bg-default" onclick="sidebarType(this)">
-          Dark
-        </button>
-      </div>
-      <p class="text-sm d-xl-none d-block mt-2">
-        You can change the sidenav type just on desktop view.
-      </p>
-      <!-- Navbar Fixed -->
-      <div class="d-flex my-3">
-        <h6 class="mb-0">Navbar Fixed</h6>
-        <div class="form-check form-switch ps-0 ms-auto my-auto">
-          <input class="form-check-input mt-1 ms-auto" type="checkbox" id="navbarFixed" onclick="navbarFixed(this)" />
-        </div>
-      </div>
-      <hr class="horizontal dark my-sm-4" />
-      <div class="mt-2 mb-5 d-flex">
-        <h6 class="mb-0">Light / Dark</h6>
-        <div class="form-check form-switch ps-0 ms-auto my-auto">
-          <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)" />
-        </div>
-      </div>
-      <a class="btn bg-gradient-dark w-100" href="https://www.creative-tim.com/product/argon-dashboard">Free Download</a>
-      <a class="btn btn-outline-dark w-100" href="https://www.creative-tim.com/learning-lab/bootstrap/license/argon-dashboard">View documentation</a>
-      <div class="w-100 text-center">
-        <a class="github-button" href="https://github.com/creativetimofficial/argon-dashboard" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star creativetimofficial/argon-dashboard on GitHub">Star</a>
-        <h6 class="mt-3">Thank you for sharing!</h6>
-        <a href="https://twitter.com/intent/tweet?text=Check%20Argon%20Dashboard%20made%20by%20%40CreativeTim%20%23webdesign%20%23dashboard%20%23bootstrap5&amp;url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fargon-dashboard" class="btn btn-dark mb-0 me-2" target="_blank">
-          <i class="fab fa-twitter me-1" aria-hidden="true"></i> Tweet
-        </a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/argon-dashboard" class="btn btn-dark mb-0 me-2" target="_blank">
-          <i class="fab fa-facebook-square me-1" aria-hidden="true"></i>
-          Share
-        </a>
-      </div>
-    </div>
-  </div>
-</div>

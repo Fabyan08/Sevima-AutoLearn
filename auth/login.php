@@ -1,550 +1,548 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Kreasi Ngalam Media</title>
-    <link rel="icon" href="../icon.png">
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Marketing</title>
+  <link rel="icon" href="../img/logo.png" type="image/png" />
+
+  <link rel="stylesheet" href="../css/bootstrap1.min.css" />
+
+  <link rel="stylesheet" href="../vendors/themefy_icon/themify-icons.css" />
+  <link rel="stylesheet" href="../vendors/font_awesome/css/all.min.css" />
+
+  <link rel="stylesheet" href="../vendors/scroll/scrollable.css" />
+
+  <link rel="stylesheet" href="../css/metisMenu.css" />
+
+  <link rel="stylesheet" href="../css/style1.css" />
+  <link rel="stylesheet" href="../css/colors/default.css" id="colorSkinCSS" />
 </head>
 
-<body>
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
-
-        *,
-        *::before,
-        *::after {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-
-        body,
-        input {
-            font-family: "Poppins", sans-serif;
-        }
-
-        main {
-            width: 100%;
-            min-height: 100vh;
-            overflow: hidden;
-            background-color: #258BFA;
-            padding: 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .box {
-            position: relative;
-            width: 100%;
-            max-width: 1020px;
-            height: 640px;
-            background-color: #fff;
-            border-radius: 3.3rem;
-            box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
-        }
-
-        .inner-box {
-            position: absolute;
-            width: calc(100% - 4.1rem);
-            height: calc(100% - 4.1rem);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .forms-wrap {
-            position: absolute;
-            height: 100%;
-            width: 45%;
-            top: 0;
-            left: 0;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr;
-            transition: 0.8s ease-in-out;
-        }
-
-        form {
-            max-width: 260px;
-            width: 100%;
-            margin: 0 auto;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            grid-column: 1 / 2;
-            grid-row: 1 / 2;
-            transition: opacity 0.02s 0.4s;
-        }
-
-        form.sign-up-form {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo img {
-            width: 27px;
-            margin-right: 0.3rem;
-        }
-
-        .logo h4 {
-            font-size: 1.1rem;
-            margin-top: -9px;
-            letter-spacing: -0.5px;
-            color: #151111;
-        }
-
-        .heading h2 {
-            font-size: 2.1rem;
-            font-weight: 600;
-            color: #151111;
-        }
-
-        .heading h6 {
-            color: #bababa;
-            font-weight: 400;
-            font-size: 0.75rem;
-            display: inline;
-        }
-
-        .toggle {
-            color: #151111;
-            text-decoration: none;
-            font-size: 0.75rem;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        .toggle:hover {
-            color: #8371fd;
-        }
-
-        .input-wrap {
-            position: relative;
-            height: 37px;
-            margin-bottom: 2rem;
-        }
-
-        .input-field {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: none;
-            border: none;
-            outline: none;
-            border-bottom: 1px solid #bbb;
-            padding: 0;
-            font-size: 0.95rem;
-            color: #151111;
-            transition: 0.4s;
-        }
-
-        label {
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 0.95rem;
-            color: #bbb;
-            pointer-events: none;
-            transition: 0.4s;
-        }
-
-        .input-field.active {
-            border-bottom-color: #151111;
-        }
-
-        .input-field.active+label {
-            font-size: 0.75rem;
-            top: -2px;
-        }
-
-        .sign-btn {
-            display: inline-block;
-            width: 100%;
-            height: 43px;
-            background-color: #151111;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            border-radius: 0.8rem;
-            font-size: 0.8rem;
-            margin-bottom: 2rem;
-            transition: 0.3s;
-        }
-
-        .sign-btn:hover {
-            background-color: #8371fd;
-        }
-
-        .text {
-            color: #bbb;
-            font-size: 0.7rem;
-        }
-
-        .text a {
-            color: #bbb;
-            transition: 0.3s;
-        }
-
-        .text a:hover {
-            color: #8371fd;
-        }
-
-        main.sign-up-mode form.sign-in-form {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        main.sign-up-mode form.sign-up-form {
-            opacity: 1;
-            pointer-events: all;
-        }
-
-        main.sign-up-mode .forms-wrap {
-            left: 55%;
-        }
-
-        main.sign-up-mode .carousel {
-            left: 0%;
-        }
-
-        .carousel {
-            position: absolute;
-            height: 100%;
-            width: 55%;
-            left: 45%;
-            top: 0;
-            background-color: #002060;
-            border-radius: 2rem;
-            display: grid;
-            grid-template-rows: auto 1fr;
-            padding-bottom: 2rem;
-            overflow: hidden;
-            transition: 0.8s ease-in-out;
-        }
-
-        .images-wrapper {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr;
-        }
-
-        .image {
-            width: 100%;
-            grid-column: 1/2;
-            grid-row: 1/2;
-            opacity: 0;
-            transition: opacity 0.3s, transform 0.5s;
-        }
-
-        .img-1 {
-            transform: translate(0, -50px);
-        }
-
-        .img-2 {
-            transform: scale(0.4, 0.5);
-        }
-
-        .img-3 {
-            transform: scale(0.3) rotate(-20deg);
-        }
-
-        .image.show {
-            opacity: 1;
-            transform: none;
-        }
-
-        .text-slider {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-
-        .text-wrap {
-            max-height: 2.2rem;
-            overflow: hidden;
-            margin-bottom: 2.5rem;
-        }
-
-        .text-group {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            transform: translateY(0);
-            transition: 0.5s;
-        }
-
-        .text-group h2 {
-            line-height: 2.2rem;
-            font-weight: 600;
-            font-size: 1.6rem;
-        }
-
-        .bullets {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .bullets span {
-            display: block;
-            width: 0.5rem;
-            height: 0.5rem;
-            background-color: #aaa;
-            margin: 0 0.25rem;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .bullets span.active {
-            width: 1.1rem;
-            background-color: #258BFA;
-            border-radius: 1rem;
-        }
-
-        @media (max-width: 850px) {
-            .box {
-                height: auto;
-                max-width: 550px;
-                overflow: hidden;
-            }
-
-            .inner-box {
-                position: static;
-                transform: none;
-                width: revert;
-                height: revert;
-                padding: 2rem;
-            }
-
-            .forms-wrap {
-                position: revert;
-                width: 100%;
-                height: auto;
-            }
-
-            form {
-                max-width: revert;
-                padding: 1.5rem 2.5rem 2rem;
-                transition: transform 0.8s ease-in-out, opacity 0.45s linear;
-            }
-
-            .heading {
-                margin: 2rem 0;
-            }
-
-            form.sign-up-form {
-                transform: translateX(100%);
-            }
-
-            main.sign-up-mode form.sign-in-form {
-                transform: translateX(-100%);
-            }
-
-            main.sign-up-mode form.sign-up-form {
-                transform: translateX(0%);
-            }
-
-            .carousel {
-                position: revert;
-                height: auto;
-                width: 100%;
-                padding: 3rem 2rem;
-                display: flex;
-            }
-
-            .images-wrapper {
-                display: none;
-            }
-
-            .text-slider {
-                width: 100%;
-            }
-        }
-
-        @media (max-width: 530px) {
-            main {
-                padding: 1rem;
-            }
-
-            .box {
-                border-radius: 2rem;
-            }
-
-            .inner-box {
-                padding: 1rem;
-            }
-
-            .carousel {
-                padding: 1.5rem 1rem;
-                border-radius: 1.6rem;
-            }
-
-            .text-wrap {
-                margin-bottom: 1rem;
-            }
-
-            .text-group h2 {
-                font-size: 1.2rem;
-            }
-
-            form {
-                padding: 1rem 2rem 1.5rem;
-            }
-        }
-    </style>
-    <main>
-        <div class="box">
-            <div class="inner-box">
-                <div class="forms-wrap">
-                    <form action="proses-login.php" method="POST" autocomplete="off" class="sign-in-form">
-                        <!-- <div class="logo"> -->
-                        <img src="ico.png" alt="easyclass" />
-                        <!-- <h4>PT Kreasi Ngalam Media</h4> -->
-                        <!-- </div> -->
-
-                        <div class="heading">
-                            <h2>Welcome Back</h2>
-                            <h6>Not registred yet?</h6>
-                            <a href="#" class="toggle">Sign up</a>
-                        </div>
-
-                        <div class="actual-form">
-                            <div class="input-wrap">
-                                <input type="text" name="nama" class="input-field" autocomplete="off" required />
-                                <label>Nama</label>
-                            </div>
-
-                            <div class="input-wrap">
-                                <input type="password" name="password" class="input-field" autocomplete="off" required />
-                                <label>Password</label>
-                            </div>
-
-                            <input type="submit" value="Sign In" class="sign-btn" />
-                        </div>
-                    </form>
-
-                    <form method="POST" action="proses-regis.php" autocomplete="off" class="sign-up-form">
-                        <img src="ico.png" alt="easyclass" />
-
-                        <div class="heading">
-                            <h2>Get Started</h2>
-                            <h6>Already have an account?</h6>
-                            <a href="#" class="toggle">Sign in</a>
-                        </div>
-
-                        <div class="actual-form">
-                            <div class="input-wrap">
-                                <input type="text" name="nama" class="input-field" autocomplete="off" required />
-                                <label>Nama Lengkap</label>
-                            </div>
-                            <div class="input-wrap">
-                                <input type="text" name="username" class="input-field" autocomplete="off" required />
-                                <label>Username</label>
-                            </div>
-                            <div class="input-wrap">
-                                <input type="email" name="email" class="input-field" autocomplete="off" required />
-                                <label>E-mail</label>
-                            </div>
-
-                            <div class="input-wrap">
-                                <input type="number" name="no_hp" class="input-field" autocomplete="off" required />
-                                <label>Nomor HP</label>
-                            </div>
-
-                            <div class="input-wrap">
-                                <input type="password" name="password" class="input-field" autocomplete="off" required />
-                                <label>Password</label>
-                            </div>
-
-                            <input type="submit" value="Sign Up" class="sign-btn" />
-                        </div>
-                    </form>
-                </div>
-
-                <div class="carousel">
-                    <div class="images-wrapper">
-                        <img src="./img/image1.png" class="image img-1 show" alt="" />
-                        <img src="./img/image2.png" class="image img-2" alt="" />
-                        <!-- <img src="./img/image3.png" class="image img-3" alt="" /> -->
-                    </div>
-
-                    <div class="text-slider">
-                        <div class="text-wrap">
-                            <div class="text-group">
-
-                            </div>
-                        </div>
-
-                        <div class="bullets">
-                            <span class="active" data-value="1"></span>
-                            <span data-value="2"></span>
-                            <!-- <span data-value="3"></span> -->
-                        </div>
-                    </div>
-                </div>
+<body class="crm_body_bg">
+  <nav class="sidebar vertical-scroll ps-container ps-theme-default ps-active-y">
+    <div class="logo d-flex justify-content-between">
+      <a href="index.html"><img src="img/logo.png" alt /></a>
+      <div class="sidebar_close_icon d-lg-none">
+        <i class="ti-close"></i>
+      </div>
+    </div>
+    <ul id="sidebar_menu">
+      <li>
+        <a class="has-arrow" href="#" aria-expanded="false">
+          <div class="icon_menu">
+            <img src="img/menu-icon/dashboard.svg" alt />
+          </div>
+          <span>Dashboard</span>
+        </a>
+        <ul>
+          <li><a href="index.html">Marketing</a></li>
+          <li><a href="index_2.html">Default</a></li>
+          <li><a href="index_3.html">Dark Menu</a></li>
+        </ul>
+      </li>
+      <li>
+        <a class="has-arrow" href="#" aria-expanded="false">
+          <div class="icon_menu">
+            <img src="img/menu-icon/2.svg" alt />
+          </div>
+          <span>App</span>
+        </a>
+        <ul>
+          <li><a href="calender.html">calender</a></li>
+          <li><a href="editor.html">editor</a></li>
+          <li><a href="mail_box.html">Mail Box</a></li>
+          <li><a href="chat.html">Chat</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </li>
+      <li>
+        <a class="has-arrow" href="#" aria-expanded="false">
+          <div class="icon_menu">
+            <img src="img/menu-icon/3.svg" alt />
+          </div>
+          <span>UI Kits</span>
+        </a>
+        <ul>
+          <li><a href="colors.html">colors</a></li>
+          <li><a href="Alerts.html">Alerts</a></li>
+          <li><a href="buttons.html">Buttons</a></li>
+          <li><a href="modal.html">modal</a></li>
+          <li><a href="dropdown.html">Droopdowns</a></li>
+          <li><a href="Badges.html">Badges</a></li>
+          <li><a href="Loading_Indicators.html">Loading Indicators</a></li>
+          <li><a href="State_color.html">State color</a></li>
+          <li><a href="typography.html">Typography</a></li>
+          <li><a href="datepicker.html">Date Picker</a></li>
+        </ul>
+      </li>
+      <li class>
+        <a class="has-arrow" href="#" aria-expanded="false">
+          <div class="icon_menu">
+            <img src="img/menu-icon/4.svg" alt />
+          </div>
+          <span>forms</span>
+        </a>
+        <ul>
+          <li><a href="Basic_Elements.html">Basic Elements</a></li>
+          <li><a href="Groups.html">Groups</a></li>
+          <li><a href="Max_Length.html">Max Length</a></li>
+          <li><a href="Layouts.html">Layouts</a></li>
+        </ul>
+      </li>
+      <li class>
+        <a class="has-arrow" href="#" aria-expanded="false">
+          <div class="icon_menu">
+            <img src="img/menu-icon/5.svg" alt />
+          </div>
+          <span>Icons</span>
+        </a>
+        <ul>
+          <li><a href="Fontawesome_Icon.html">Fontawesome Icon</a></li>
+          <li><a href="themefy_icon.html">themefy icon</a></li>
+        </ul>
+      </li>
+      <li class>
+        <a class="has-arrow" href="#" aria-expanded="false">
+          <div class="icon_menu">
+            <img src="img/menu-icon/6.svg" alt />
+          </div>
+          <span>Animations</span>
+        </a>
+        <ul>
+          <li><a href="wow_animation.html">Animate</a></li>
+          <li><a href="Scroll_Reveal.html">Scroll Reveal</a></li>
+          <li><a href="tilt.html">Tilt Animation</a></li>
+        </ul>
+      </li>
+      <li class>
+        <a class="has-arrow" href="#" aria-expanded="false">
+          <div class="icon_menu">
+            <img src="img/menu-icon/7.svg" alt />
+          </div>
+          <span>Components</span>
+        </a>
+        <ul>
+          <li><a href="accordion.html">Accordions</a></li>
+          <li><a href="Scrollable.html">Scrollable</a></li>
+          <li><a href="notification.html">Notifications</a></li>
+          <li><a href="carousel.html">Carousel</a></li>
+          <li><a href="Pagination.html">Pagination</a></li>
+        </ul>
+      </li>
+      <li class>
+        <a class="has-arrow" href="#" aria-expanded="false">
+          <div class="icon_menu">
+            <img src="img/menu-icon/8.svg" alt />
+          </div>
+          <span>Table</span>
+        </a>
+        <ul>
+          <li><a href="data_table.html">Data Tables</a></li>
+          <li><a href="bootstrap_table.html">Bootstrap</a></li>
+        </ul>
+      </li>
+      <li class>
+        <a class="has-arrow" href="#" aria-expanded="false">
+          <div class="icon_menu">
+            <img src="img/menu-icon/9.svg" alt />
+          </div>
+          <span>Cards</span>
+        </a>
+        <ul>
+          <li><a href="basic_card.html">Basic Card</a></li>
+          <li><a href="theme_card.html">Theme Card</a></li>
+          <li><a href="dargable_card.html">Draggable Card</a></li>
+        </ul>
+      </li>
+      <li class>
+        <a class="has-arrow" href="#" aria-expanded="false">
+          <div class="icon_menu">
+            <img src="img/menu-icon/11.svg" alt />
+          </div>
+          <span>Charts</span>
+        </a>
+        <ul>
+          <li><a href="chartjs.html">ChartJS</a></li>
+          <li><a href="apex_chart.html">Apex Charts</a></li>
+          <li><a href="chart_sparkline.html">Chart sparkline</a></li>
+          <li><a href="am_chart.html">am-charts</a></li>
+          <li><a href="nvd3_charts.html">nvd3 charts.</a></li>
+        </ul>
+      </li>
+      <li class>
+        <a class="has-arrow" href="#" aria-expanded="false">
+          <div class="icon_menu">
+            <img src="img/menu-icon/cubes.svg" alt />
+          </div>
+          <span>Widgets</span>
+        </a>
+        <ul>
+          <li><a href="chart_box_1.html">Chart Boxes 1</a></li>
+          <li><a href="profilebox.html">Profile Box</a></li>
+        </ul>
+      </li>
+      <li class>
+        <a class="has-arrow" href="#" aria-expanded="false">
+          <div class="icon_menu">
+            <img src="img/menu-icon/map.svg" alt />
+          </div>
+          <span>Maps</span>
+        </a>
+        <ul>
+          <li><a href="mapjs.html">Maps JS</a></li>
+          <li><a href="vector_map.html">Vector Maps</a></li>
+        </ul>
+      </li>
+      <li class>
+        <a class="has-arrow" href="#" aria-expanded="false">
+          <div class="icon_menu">
+            <img src="img/menu-icon/10.svg" alt />
+          </div>
+          <span>Pages</span>
+        </a>
+        <ul>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="resister.html">Register</a></li>
+          <li><a href="error_400.html">Error 404</a></li>
+          <li><a href="error_500.html">Error 500</a></li>
+          <li><a href="forgot_pass.html">Forgot Password</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="main_content dashboard_part large_header_bg">
+    <div class="container-fluid g-0">
+      <div class="row">
+        <div class="col-lg-12 p-0">
+          <div class="header_iner d-flex justify-content-between align-items-center">
+            <div class="sidebar_icon d-lg-none">
+              <i class="ti-menu"></i>
             </div>
+            <div class="serach_field-area d-flex align-items-center">
+              <div class="search_inner">
+                <form action="#">
+                  <div class="search_field">
+                    <input type="text" placeholder="Search here..." />
+                  </div>
+                  <button type="submit">
+                    <img src="img/icon/icon_search.svg" alt />
+                  </button>
+                </form>
+              </div>
+              <span class="f_s_14 f_w_400 ml_25 white_text text_white">Apps</span>
+            </div>
+            <div class="header_right d-flex justify-content-between align-items-center">
+              <div class="header_notification_warp d-flex align-items-center">
+                <li>
+                  <a class="bell_notification_clicker nav-link-notify" href="#">
+                    <img src="img/icon/bell.svg" alt />
+                  </a>
+
+                  <div class="Menu_NOtification_Wrap">
+                    <div class="notification_Header">
+                      <h4>Notifications</h4>
+                    </div>
+                    <div class="Notification_body">
+                      <div class="single_notify d-flex align-items-center">
+                        <div class="notify_thumb">
+                          <a href="#"><img src="img/staf/2.png" alt /></a>
+                        </div>
+                        <div class="notify_content">
+                          <a href="#">
+                            <h5>Cool Marketing</h5>
+                          </a>
+                          <p>Lorem ipsum dolor sit amet</p>
+                        </div>
+                      </div>
+
+                      <div class="single_notify d-flex align-items-center">
+                        <div class="notify_thumb">
+                          <a href="#"><img src="img/staf/4.png" alt /></a>
+                        </div>
+                        <div class="notify_content">
+                          <a href="#">
+                            <h5>Awesome packages</h5>
+                          </a>
+                          <p>Lorem ipsum dolor sit amet</p>
+                        </div>
+                      </div>
+
+                      <div class="single_notify d-flex align-items-center">
+                        <div class="notify_thumb">
+                          <a href="#"><img src="img/staf/3.png" alt /></a>
+                        </div>
+                        <div class="notify_content">
+                          <a href="#">
+                            <h5>what a packages</h5>
+                          </a>
+                          <p>Lorem ipsum dolor sit amet</p>
+                        </div>
+                      </div>
+
+                      <div class="single_notify d-flex align-items-center">
+                        <div class="notify_thumb">
+                          <a href="#"><img src="img/staf/2.png" alt /></a>
+                        </div>
+                        <div class="notify_content">
+                          <a href="#">
+                            <h5>Cool Marketing</h5>
+                          </a>
+                          <p>Lorem ipsum dolor sit amet</p>
+                        </div>
+                      </div>
+
+                      <div class="single_notify d-flex align-items-center">
+                        <div class="notify_thumb">
+                          <a href="#"><img src="img/staf/4.png" alt /></a>
+                        </div>
+                        <div class="notify_content">
+                          <a href="#">
+                            <h5>Awesome packages</h5>
+                          </a>
+                          <p>Lorem ipsum dolor sit amet</p>
+                        </div>
+                      </div>
+
+                      <div class="single_notify d-flex align-items-center">
+                        <div class="notify_thumb">
+                          <a href="#"><img src="img/staf/3.png" alt /></a>
+                        </div>
+                        <div class="notify_content">
+                          <a href="#">
+                            <h5>what a packages</h5>
+                          </a>
+                          <p>Lorem ipsum dolor sit amet</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="nofity_footer">
+                      <div class="submit_button text-center pt_20">
+                        <a href="#" class="btn_1">See More</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a class="CHATBOX_open nav-link-notify" href="#">
+                    <img src="img/icon/msg.svg" alt />
+                  </a>
+                </li>
+              </div>
+              <div class="profile_info">
+                <img src="img/client_img.png" alt="#" />
+                <div class="profile_info_iner">
+                  <div class="profile_author_name">
+                    <p>Neurologist</p>
+                    <h5>Dr. Robar Smith</h5>
+                  </div>
+                  <div class="profile_info_details">
+                    <a href="#">My Profile </a>
+                    <a href="#">Settings</a>
+                    <a href="#">Log Out </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </main>
+      </div>
+    </div>
 
-    <!-- Javascript file -->
+    <div class="main_content_iner">
+      <div class="container-fluid p-0">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="dashboard_header mb_50">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="dashboard_header_title">
+                    <h3>Login</h3>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="dashboard_breadcam text-end">
+                    <p>
+                      <a href="index.html">Dashboard</a>
+                      <i class="fas fa-caret-right"></i> login
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="white_box mb_30">
+              <div class="row justify-content-center">
+                <div class="col-lg-6">
+                  <div class="modal-content cs_modal">
+                    <div class="modal-header justify-content-center theme_bg_1">
+                      <h5 class="modal-title text_white">Log in</h5>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class>
+                          <input type="text" class="form-control" placeholder="Enter your email" />
+                        </div>
+                        <div class>
+                          <input type="password" class="form-control" placeholder="Password" />
+                        </div>
+                        <a href="#" class="btn_1 full_width text-center">Log in</a>
+                        <p>
+                          Need an account?
+                          <a data-bs-toggle="modal" data-bs-target="#sing_up" data-bs-dismiss="modal" href="#">
+                            Sign Up</a>
+                        </p>
+                        <div class="text-center">
+                          <a href="#" data-bs-toggle="modal" data-bs-target="#forgot_password" data-bs-dismiss="modal" class="pass_forget_btn">Forget Password?</a>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <script src="app.js"></script>
+    <div class="footer_part">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="footer_iner text-center">
+              <p>
+                2020 © Influence - Designed by
+                <a href="#"> <i class="ti-heart"></i> </a><a href="#"> Dashboard</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="CHAT_MESSAGE_POPUPBOX">
+    <div class="CHAT_POPUP_HEADER">
+      <div class="MSEESAGE_CHATBOX_CLOSE">
+        <svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.09939 5.98831L11.772 10.661C12.076 10.965 12.076 11.4564 11.772 11.7603C11.468 12.0643 10.9766 12.0643 10.6726 11.7603L5.99994 7.08762L1.32737 11.7603C1.02329 12.0643 0.532002 12.0643 0.228062 11.7603C-0.0760207 11.4564 -0.0760207 10.965 0.228062 10.661L4.90063 5.98831L0.228062 1.3156C-0.0760207 1.01166 -0.0760207 0.520226 0.228062 0.216286C0.379534 0.0646715 0.578697 -0.0114918 0.777717 -0.0114918C0.976738 -0.0114918 1.17576 0.0646715 1.32737 0.216286L5.99994 4.889L10.6726 0.216286C10.8243 0.0646715 11.0233 -0.0114918 11.2223 -0.0114918C11.4213 -0.0114918 11.6203 0.0646715 11.772 0.216286C12.076 0.520226 12.076 1.01166 11.772 1.3156L7.09939 5.98831Z" fill="white" />
+        </svg>
+      </div>
+      <h3>Chat with us</h3>
+      <div class="Chat_Listed_member">
+        <ul>
+          <li>
+            <a href="#">
+              <div class="member_thumb">
+                <img src="img/staf/1.png" alt />
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="member_thumb">
+                <img src="img/staf/2.png" alt />
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="member_thumb">
+                <img src="img/staf/3.png" alt />
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="member_thumb">
+                <img src="img/staf/4.png" alt />
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="member_thumb">
+                <img src="img/staf/5.png" alt />
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="member_thumb">
+                <div class="more_member_count">
+                  <span>90+</span>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="CHAT_POPUP_BODY">
+      <p class="mesaged_send_date">Sunday, 12 January</p>
+      <div class="CHATING_SENDER">
+        <div class="SMS_thumb">
+          <img src="img/staf/1.png" alt />
+        </div>
+        <div class="SEND_SMS_VIEW">
+          <p>Hi! Welcome . How can I help you?</p>
+        </div>
+      </div>
+      <div class="CHATING_SENDER CHATING_RECEIVEr">
+        <div class="SEND_SMS_VIEW">
+          <p>Hello</p>
+        </div>
+        <div class="SMS_thumb">
+          <img src="img/staf/1.png" alt />
+        </div>
+      </div>
+    </div>
+    <div class="CHAT_POPUP_BOTTOM">
+      <div class="chat_input_box d-flex align-items-center">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Write your message" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+          <div class="input-group-append">
+            <button class="btn" type="button">
+              <svg width="22" height="22" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.7821 3.21895C14.4908 -1.07281 7.50882 -1.07281 3.2183 3.21792C-1.07304 7.50864 -1.07263 14.4908 3.21872 18.7824C7.50882 23.0729 14.4908 23.0729 18.7817 18.7815C23.0726 14.4908 23.0724 7.50906 18.7821 3.21895ZM17.5813 17.5815C13.9525 21.2103 8.04773 21.2108 4.41871 17.5819C0.78907 13.9525 0.789485 8.04714 4.41871 4.41832C8.04752 0.789719 13.9521 0.789304 17.5817 4.41874C21.2105 8.04755 21.2101 13.9529 17.5813 17.5815ZM6.89503 8.02162C6.89503 7.31138 7.47107 6.73534 8.18131 6.73534C8.89135 6.73534 9.46739 7.31117 9.46739 8.02162C9.46739 8.73228 8.89135 9.30811 8.18131 9.30811C7.47107 9.30811 6.89503 8.73228 6.89503 8.02162ZM12.7274 8.02162C12.7274 7.31138 13.3038 6.73534 14.0141 6.73534C14.7241 6.73534 15.3002 7.31117 15.3002 8.02162C15.3002 8.73228 14.7243 9.30811 14.0141 9.30811C13.3038 9.30811 12.7274 8.73228 12.7274 8.02162ZM15.7683 13.2898C14.9712 15.1332 13.1043 16.3243 11.0126 16.3243C8.8758 16.3243 6.99792 15.1272 6.22834 13.2744C6.09642 12.9573 6.24681 12.593 6.56438 12.4611C6.64238 12.4289 6.72328 12.4136 6.80293 12.4136C7.04687 12.4136 7.27836 12.5577 7.37772 12.7973C7.95376 14.1842 9.38048 15.0799 11.0126 15.0799C12.6077 15.0799 14.0261 14.1836 14.626 12.7959C14.7625 12.4804 15.1288 12.335 15.4441 12.4717C15.7594 12.6084 15.9048 12.9745 15.7683 13.2898Z" fill="#707DB7" />
+              </svg>
+            </button>
+            <button class="btn" type="button">
+              <svg width="22" height="22" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 0.289062C4.92455 0.289062 0 5.08402 0 10.9996C0 16.9152 4.92455 21.7101 11 21.7101C17.0755 21.7101 22 16.9145 22 10.9996C22 5.08472 17.0755 0.289062 11 0.289062ZM11 20.3713C5.68423 20.3713 1.375 16.1755 1.375 10.9996C1.375 5.82371 5.68423 1.62788 11 1.62788C16.3158 1.62788 20.625 5.82371 20.625 10.9996C20.625 16.1755 16.3158 20.3713 11 20.3713ZM15.125 10.3302H11.6875V6.98314C11.6875 6.61363 11.3795 6.31373 11 6.31373C10.6205 6.31373 10.3125 6.61363 10.3125 6.98314V10.3302H6.875C6.4955 10.3302 6.1875 10.6301 6.1875 10.9996C6.1875 11.3691 6.4955 11.669 6.875 11.669H10.3125V15.016C10.3125 15.3855 10.6205 15.6854 11 15.6854C11.3795 15.6854 11.6875 15.3855 11.6875 15.016V11.669H15.125C15.5045 11.669 15.8125 11.3691 15.8125 10.9996C15.8125 10.6301 15.5045 10.3302 15.125 10.3302Z" fill="#707DB7" />
+              </svg>
+
+              <input type="file" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="back-top" style="display: none">
+    <a title="Go to Top" href="#">
+      <i class="ti-angle-up"></i>
+    </a>
+  </div>
+
+  <script src="../js/jquery1-3.4.1.min.js"></script>
+
+  <script src="../js/popper1.min.js"></script>
+
+  <script src="../js/bootstrap1.min.js"></script>
+
+  <script src="../js/metisMenu.js"></script>
+
+  <script src="../vendors/scroll/perfect-scrollbar.min.js"></script>
+  <script src="../vendors/scroll/scrollable-custom.js"></script>
+
+  <script src="../js/custom.js"></script>
 </body>
 
 </html>
-
-<script>
-    const inputs = document.querySelectorAll(".input-field");
-    const toggle_btn = document.querySelectorAll(".toggle");
-    const main = document.querySelector("main");
-    const bullets = document.querySelectorAll(".bullets span");
-    const images = document.querySelectorAll(".image");
-
-    inputs.forEach((inp) => {
-        inp.addEventListener("focus", () => {
-            inp.classList.add("active");
-        });
-        inp.addEventListener("blur", () => {
-            if (inp.value != "") return;
-            inp.classList.remove("active");
-        });
-    });
-
-    toggle_btn.forEach((btn) => {
-        btn.addEventListener("click", () => {
-            main.classList.toggle("sign-up-mode");
-        });
-    });
-
-    function moveSlider() {
-        let index = this.dataset.value;
-
-        let currentImage = document.querySelector(`.img-${index}`);
-        images.forEach((img) => img.classList.remove("show"));
-        currentImage.classList.add("show");
-
-        const textSlider = document.querySelector(".text-group");
-        textSlider.style.transform = `translateY(${-(index - 1) * 2.2}rem)`;
-
-        bullets.forEach((bull) => bull.classList.remove("active"));
-        this.classList.add("active");
-    }
-
-    bullets.forEach((bullet) => {
-        bullet.addEventListener("click", moveSlider);
-    });
-</script>

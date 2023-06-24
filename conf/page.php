@@ -6,8 +6,17 @@ if (isset($_GET['page'])) {
         case 'index':
             include 'pages/dashboard.php';
             break;
-        case 'karyawan':
-            include 'pages/admin/karyawan/karyawan.php';
+        case 'calendar':
+            include 'pages/calendar.php';
+            break;
+        case 'editor':
+            include 'pages/editor.php';
+            break;
+        case 'chat':
+            include 'pages/chat.php';
+            break;
+        case 'faq':
+            include 'pages/faq.php';
             break;
     }
 } else {
