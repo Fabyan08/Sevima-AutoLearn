@@ -10,7 +10,7 @@ if (isset($_POST['str'])) {
         "model" => "text-davinci-003",
         "prompt" => "$str",
         "temperature" => 0,
-        "max_tokens" => 64,
+        "max_tokens" => 150,
         "top_p" => 1.0,
         "frequency_penalty" => 0.0,
         "presence_penalty" => 0.0,
@@ -22,7 +22,7 @@ if (isset($_POST['str'])) {
 
     $headers = array();
     $headers[] = 'Content-Type: application/json';
-    $headers[] = 'Authorization: Bearer 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';
+    $headers[] = 'Authorization: Bearer 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';
     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
     $result = curl_exec($ch);

@@ -68,15 +68,17 @@ session_start()
           <div class="icon_menu">
             <img src="img/menu-icon/2.svg" alt />
           </div>
-          <span>App</span>
+          <span>Chat AI</span>
         </a>
         <ul>
-          <li><a href="?page=editor">editor</a></li>
           <li><a href="?page=chat">Chat</a></li>
-          <li><a href="?page=faq">FAQ</a></li>
+          <li><a href="?page=translate">Translate</a></li>
+          <li><a href="?page=jurnal">Jurnal</a></li>
+          <!-- <li><a href="?page=editor">editor</a></li>
+          <li><a href="?page=faq">FAQ</a></li> -->
         </ul>
       </li>
-      <li class>
+      <!-- <li class>
         <a class="has-arrow" href="#" aria-expanded="false">
           <div class="icon_menu">
             <img src="img/menu-icon/4.svg" alt />
@@ -88,7 +90,7 @@ session_start()
           <li><a href="?page=group">Groups</a></li>
           <li><a href="?page=layout">Layouts</a></li>
         </ul>
-      </li>
+      </li> -->
 
 
     </ul>
