@@ -23,6 +23,9 @@ if (isset($_GET['page'])) {
         case 'layout':
             include 'pages/layout.php';
             break;
+        case 'profil':
+            include 'pages/profile.php';
+            break;
 
 
         case 'login':

@@ -29,23 +29,20 @@
                   <h5 class="modal-title text_white">Log in</h5>
                 </div>
                 <div class="modal-body">
-                  <form action="proses-login.php" method="POST" autocomplete="off" class="sign-in-form">
+                  <form action="auth/proses-login.php" method="POST" autocomplete="off" class="sign-in-form">
                     <div class>
                       <input type="text" required class="form-control" name="nama" placeholder="Nama" />
                     </div>
                     <div class>
-                      <input type="password" required class="form-control" name="pasword" placeholder="Password" />
+                      <input type="password" required class="form-control" name="password" placeholder="Password" />
                     </div>
                     <button type="submit" class="btn_1 full_width text-center">Log in</button>
                   </form>
                   <p>
                     Need an account?
-                    <a data-bs-toggle="modal" data-bs-target="#sing_up" data-bs-dismiss="modal" href="#">
+                    <a href="?page=register">
                       Sign Up</a>
                   </p>
-                  <div class="text-center">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#forgot_password" data-bs-dismiss="modal" class="pass_forget_btn">Forget Password?</a>
-                  </div>
                 </div>
               </div>
             </div>

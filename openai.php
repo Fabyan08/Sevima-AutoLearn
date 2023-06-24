@@ -22,7 +22,7 @@ if (isset($_POST['str'])) {
 
     $headers = array();
     $headers[] = 'Content-Type: application/json';
-    $headers[] = 'Authorization: Bearer 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';
+    $headers[] = 'Authorization: Bearer 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';
     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
     $result = curl_exec($ch);

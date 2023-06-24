@@ -1,4 +1,5 @@
 <?php include('conf/koneksi.php');
+session_start()
 ?>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -89,18 +90,7 @@
         </ul>
       </li>
 
-      <li class>
-        <a class="has-arrow" href="#" aria-expanded="false">
-          <div class="icon_menu">
-            <img src="img/menu-icon/10.svg" alt />
-          </div>
-          <span>Pages</span>
-        </a>
-        <ul>
-          <li><a href="?page=login">Login</a></li>
-          <li><a href="?page=register">Register</a></li>
-        </ul>
-      </li>
+
     </ul>
   </nav>
 
@@ -127,95 +117,7 @@
             </div>
             <div class="header_right d-flex justify-content-between align-items-center">
               <div class="header_notification_warp d-flex align-items-center">
-                <li>
-                  <a class="bell_notification_clicker nav-link-notify" href="#">
-                    <img src="img/icon/bell.svg" alt />
-                  </a>
 
-                  <div class="Menu_NOtification_Wrap">
-                    <div class="notification_Header">
-                      <h4>Notifications</h4>
-                    </div>
-                    <div class="Notification_body">
-                      <div class="single_notify d-flex align-items-center">
-                        <div class="notify_thumb">
-                          <a href="#"><img src="img/staf/2.png" alt /></a>
-                        </div>
-                        <div class="notify_content">
-                          <a href="#">
-                            <h5>Cool Marketing</h5>
-                          </a>
-                          <p>Lorem ipsum dolor sit amet</p>
-                        </div>
-                      </div>
-
-                      <div class="single_notify d-flex align-items-center">
-                        <div class="notify_thumb">
-                          <a href="#"><img src="img/staf/4.png" alt /></a>
-                        </div>
-                        <div class="notify_content">
-                          <a href="#">
-                            <h5>Awesome packages</h5>
-                          </a>
-                          <p>Lorem ipsum dolor sit amet</p>
-                        </div>
-                      </div>
-
-                      <div class="single_notify d-flex align-items-center">
-                        <div class="notify_thumb">
-                          <a href="#"><img src="img/staf/3.png" alt /></a>
-                        </div>
-                        <div class="notify_content">
-                          <a href="#">
-                            <h5>what a packages</h5>
-                          </a>
-                          <p>Lorem ipsum dolor sit amet</p>
-                        </div>
-                      </div>
-
-                      <div class="single_notify d-flex align-items-center">
-                        <div class="notify_thumb">
-                          <a href="#"><img src="img/staf/2.png" alt /></a>
-                        </div>
-                        <div class="notify_content">
-                          <a href="#">
-                            <h5>Cool Marketing</h5>
-                          </a>
-                          <p>Lorem ipsum dolor sit amet</p>
-                        </div>
-                      </div>
-
-                      <div class="single_notify d-flex align-items-center">
-                        <div class="notify_thumb">
-                          <a href="#"><img src="img/staf/4.png" alt /></a>
-                        </div>
-                        <div class="notify_content">
-                          <a href="#">
-                            <h5>Awesome packages</h5>
-                          </a>
-                          <p>Lorem ipsum dolor sit amet</p>
-                        </div>
-                      </div>
-
-                      <div class="single_notify d-flex align-items-center">
-                        <div class="notify_thumb">
-                          <a href="#"><img src="img/staf/3.png" alt /></a>
-                        </div>
-                        <div class="notify_content">
-                          <a href="#">
-                            <h5>what a packages</h5>
-                          </a>
-                          <p>Lorem ipsum dolor sit amet</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="nofity_footer">
-                      <div class="submit_button text-center pt_20">
-                        <a href="#" class="btn_1">See More</a>
-                      </div>
-                    </div>
-                  </div>
-                </li>
                 <li>
                   <a class="CHATBOX_open nav-link-notify" href="#">
                     <img src="img/icon/msg.svg" alt />
@@ -226,14 +128,26 @@
                 <img src="img/client_img.png" alt="#" />
                 <div class="profile_info_iner">
                   <div class="profile_author_name">
-                    <p>Neurologist</p>
-                    <h5>Dr. Robar Smith</h5>
+                    <?php if (isset($_SESSION['nama']) == null) {
+                      echo '<p>Anonym</p>';
+                      echo '<h5>Anonym</h5>';
+                    } else { ?>
+                      <p><?= $_SESSION['level']; ?></p>
+                      <h5><?= $_SESSION['nama']; ?></h5>
+                    <?php } ?>
                   </div>
-                  <div class="profile_info_details">
-                    <a href="#">My Profile </a>
-                    <a href="#">Settings</a>
-                    <a href="#">Log Out </a>
-                  </div>
+                  <?php if (isset($_SESSION['nama']) == null) { ?>
+                    <div class="profile_info_details">
+                      <a href="?page=login">Login</a>
+                      <a href="?page=register.php">Register</a>
+                    </div>
+                  <?php
+                  } else { ?>
+                    <div class="profile_info_details">
+                      <a href="?page=profil">My Profile </a>
+                      <a href="auth/logout.php">Log Out </a>
+                    </div>
+                  <?php } ?>
                 </div>
               </div>
             </div>

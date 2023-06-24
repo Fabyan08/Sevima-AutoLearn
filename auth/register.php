@@ -6,7 +6,7 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="dashboard_header_title">
-                                <h3>Resister</h3>
+                                <h3>Register</h3>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -24,30 +24,27 @@
 
                             <div class="modal-content cs_modal">
                                 <div class="modal-header theme_bg_1 justify-content-center">
-                                    <h5 class="modal-title text_white">Resister</h5>
+                                    <h5 class="modal-title text_white">Register</h5>
                                 </div>
                                 <div class="modal-body">
-                                    <form>
+                                    <form action="auth/proses-regis.php" method="POST">
                                         <div class>
-                                            <input type="text" class="form-control" placeholder="Full Name">
-                                        </div>
-                                        <div class>
-                                            <input type="text" class="form-control" placeholder="Enter your email">
+                                            <input type="text" name="nama" class="form-control" placeholder="Full Name">
                                         </div>
                                         <div class>
-                                            <input type="password" class="form-control" placeholder="Password">
+                                            <input type="text" name="username" class="form-control" placeholder="Enter your username">
                                         </div>
-                                        <div class=" cs_check_box">
-                                            <input type="checkbox" id="check_box" class="common_checkbox">
-                                            <label class="form-label" for="check_box">
-                                                Keep me up to date
-                                            </label>
+                                        <div class>
+                                            <input type="email" name="email" class="form-control" placeholder="Enter your email">
                                         </div>
-                                        <a href="#" class="btn_1 full_width text-center"> Sign Up</a>
-                                        <p>Need an account? <a data-bs-toggle="modal" data-bs-target="#sing_up" data-bs-dismiss="modal" href="#">Log in</a></p>
-                                        <div class="text-center">
-                                            <a href="#" data-bs-toggle="modal" data-bs-target="#forgot_password" data-bs-dismiss="modal" class="pass_forget_btn">Forget Password?</a>
+                                        <div class>
+                                            <input type="number" name="no_hp" class="form-control" placeholder="Enter your HP number">
                                         </div>
+                                        <div class>
+                                            <input type="password" name="password" class="form-control" placeholder="Password">
+                                        </div>
+                                        <button type="submit" class="btn_1 full_width text-center"> Sign Up</button>
+                                        <p>Need an account? <a data-bs-toggle="modal" data-bs-target="#sing_up" data-bs-dismiss="modal" href="?page=login">Log in</a></p>
                                     </form>
                                 </div>
                             </div>
@@ -57,4 +54,4 @@
             </div>
         </div>
     </div>
-</div>  
+</div>

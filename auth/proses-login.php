@@ -7,7 +7,6 @@ $nama = $_POST['nama'];
 $password = md5($_POST['password']);
 
 $sql = "SELECT * from user where nama='$nama' and password='$password'";
-
 $login = mysqli_query($koneksi, "$sql");
 $cek = mysqli_num_rows($login);
 
@@ -19,12 +18,12 @@ if ($cek > 0) {
         $_SESSION['nama'] = $row['nama'];
         $level = $row['level'];
 
-        // echo '<script>window.location.href="../index.php"</script>';
+        echo '<script>window.location.href="../index.php"</script>';
     }
 ?>
 <?php
 } else {
     echo '<script>alert("Masukan Username dan Password dengan Benar.");
-    window.location.href="login.php"</script>';
+    window.location.href="../index.php?page=login"</script>';
 }
 ?>
