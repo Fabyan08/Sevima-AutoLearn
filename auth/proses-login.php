@@ -18,7 +18,8 @@ if ($cek > 0) {
         $_SESSION['level'] = $row['level'];
         $_SESSION['nama'] = $row['nama'];
         $level = $row['level'];
-        echo '<script>window.location.href="../index.php"</script>';
+
+        // echo '<script>window.location.href="../index.php"</script>';
     }
 ?>
 <?php
