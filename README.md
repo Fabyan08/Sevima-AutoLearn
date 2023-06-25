@@ -49,3 +49,10 @@ Menu referensi jurnal ini memberikan pengguna akses ke sumber daya pengetahuan y
 Dengan integrasi AI, aplikasi dapat menyajikan referensi jurnal yang paling relevan dan berkualitas tinggi untuk membantu pengguna dalam meneliti topik pendidikan yang mereka pilih. Pengguna dapat menjelajahi abstrak, hasil penelitian, dan temuan-temuan dalam jurnal-jurnal tersebut untuk memperdalam pemahaman mereka.
 
 Menu referensi jurnal ini menjadi alat yang bermanfaat bagi pengguna yang ingin mengakses sumber-sumber penelitian terkini dan terpercaya. Dengan bantuan teknologi AI, pengguna dapat memperoleh referensi jurnal yang sesuai dengan mata pelajaran mereka dengan cara yang efisien, akurat, dan memudahkan eksplorasi pengetahuan.
+
+# Mini chat
+
+Dalam mini chat, Anda bisa menanyakan apa saja yang ingin diketahui dengan cepat tanpa mengetahui semua fitur website. Jadi, langkah ini akan sangat memudahkanmu jika ingin mengetahui hal yang kamu bingungkan.
+
+# Login, Register, dan Edit Profil
+Seperti pada umumnya, ada beberapa fitur untuk memastikan kenyamana pengguna dengan login, register, beserta edit profil sesua dengan yang diinginkan.
