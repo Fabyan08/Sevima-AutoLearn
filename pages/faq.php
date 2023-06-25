@@ -12,7 +12,7 @@
             <div class="col-lg-6">
               <div class="dashboard_breadcam text-end">
                 <p>
-                  <a href="index.html">Dashboard</a>
+                  <a href="index.php">Dashboard</a>
                   <i class="fas fa-caret-right"></i> Faq
                 </p>
               </div>

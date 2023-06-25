@@ -22,7 +22,7 @@ if (isset($_POST['string'])) {
 
   $headers = array();
   $headers[] = 'Content-Type: application/json';
-  $headers[] = 'Authorization: Bearer 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';
+  $headers[] = 'Authorization: Bearer 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';
   curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
   $result = curl_exec($ch);
@@ -35,7 +35,7 @@ if (isset($_POST['string'])) {
 }
 
 ?>
-<div class="main_content_iner">
+<div class="main_content_iner" data-aos="fade-up" data-aos-duration="1000">
   <div class="container-fluid p-0">
     <div class="row">
       <div class="col-12">
@@ -44,13 +44,13 @@ if (isset($_POST['string'])) {
             <div class="col-lg-6">
               <div class="dashboard_header_title">
                 <h3>Translation AI</h3>
-                <h6>AI ini bisa semua bahasa loh!</h6>
+                <h6>Terjemahan kata dari semua bahasa!</h6>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="dashboard_breadcam text-end">
                 <p>
-                  <a href="index.html">Dashboard</a>
+                  <a href="index.php">Dashboard</a>
                   <i class="fas fa-caret-right"></i> Editor
                 </p>
               </div>

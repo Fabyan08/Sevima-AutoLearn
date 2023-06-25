@@ -1,4 +1,4 @@
-<div class="main_content_iner ">
+<div class="main_content_iner">
     <div class="container-fluid p-0">
         <div class="row justify-content-center">
             <div class="col-12">
@@ -11,7 +11,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="dashboard_breadcam text-end">
-                                <p><a href="index.html">Dashboard</a> <i class="fas fa-caret-right"></i> Resister</p>
+                                <p><a href="index.php">Dashboard</a> <i class="fas fa-caret-right"></i> Resister</p>
                             </div>
                         </div>
                     </div>

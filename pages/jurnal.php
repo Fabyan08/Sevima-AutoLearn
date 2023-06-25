@@ -23,7 +23,7 @@ if (isset($_POST['mapel'])) {
 
     $headers = array();
     $headers[] = 'Content-Type: application/json';
-    $headers[] = 'Authorization: Bearer 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';
+    $headers[] = 'Authorization: Bearer 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';
     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
     $result = curl_exec($ch);
@@ -35,7 +35,7 @@ if (isset($_POST['mapel'])) {
 }
 
 ?>
-<div class="main_content_iner ">
+<div class="main_content_iner" data-aos="fade-up" data-aos-duration="1000">
     <div class="container-fluid p-0 sm_padding_15px">
         <div class="row justify-content-center">
             <div class="col-lg-12">

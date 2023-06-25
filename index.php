@@ -34,6 +34,10 @@ session_start()
   <link rel="stylesheet" href="vendors/text_editor/summernote-bs4.css" />
 
   <link rel="stylesheet" href="vendors/morris/morris.css" />
+  <script src="https://use.fontawesome.com/a34asdfsd.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link rel="stylesheet" href="vendors/material_icon/material-icons.css" />
 
@@ -41,12 +45,18 @@ session_start()
 
   <link rel="stylesheet" href="css/style1.css" />
   <link rel="stylesheet" href="css/colors/default.css" id="colorSkinCSS" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- <link rel="stylesheet" href="img/themify-icons/demo-files/demo.css"> -->
+  <link rel="stylesheet" href="img/themify-icons/themify-icons.css">
+  <!--[if lt IE 8]><!-->
+  <!-- <link rel="stylesheet" href="ie7/ie7.css"> -->
+  <!--<![endif]-->
 </head>
 
 <body class="crm_body_bg">
   <nav class="sidebar vertical-scroll ps-container ps-theme-default ps-active-y">
     <div class="logo d-flex justify-content-between">
-      <a href="index.html"><img src="ico.png" alt /></a>
+      <a href="index.php"><img src="ico.png" alt /></a>
       <div class="sidebar_close_icon d-lg-none">
         <i class="ti-close"></i>
       </div>
@@ -141,7 +151,7 @@ session_start()
                   <?php if (isset($_SESSION['nama']) == null) { ?>
                     <div class="profile_info_details">
                       <a href="?page=login">Login</a>
-                      <a href="?page=register.php">Register</a>
+                      <a href="?page=register">Register</a>
                     </div>
                   <?php
                   } else { ?>
@@ -166,8 +176,7 @@ session_start()
           <div class="col-lg-12">
             <div class="footer_iner text-center">
               <p>
-                2020 © Influence - Designed by
-                <a href="#"> <i class="ti-heart"></i> </a><a href="#"> Dashboard</a>
+                <a href="#"> <i class="ti-heart"></i> </a><a href="#"> Sevima - AutoLearn</a>
               </p>
             </div>
           </div>
@@ -310,6 +319,13 @@ session_start()
   <script src="vendors/chart_am/chart-custom.js"></script>
 
   <script src="js/custom.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 3000,
+      once: true
+    });
+  </script>
 </body>
 
 </html>
