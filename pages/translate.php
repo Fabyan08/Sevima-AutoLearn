@@ -10,7 +10,7 @@ if (isset($_POST['string'])) {
     "model" => "text-davinci-003",
     "prompt" => "$string",
     "temperature" => 0,
-    "max_tokens" => 64,
+    "max_tokens" => 150,
     "top_p" => 1.0,
     "frequency_penalty" => 0.0,
     "presence_penalty" => 0.0,
@@ -65,16 +65,24 @@ if (isset($_POST['string'])) {
         </form>
       </div>
       <div class="col-lg-12">
-        <div class="card_box box_shadow position-relative mb_30">
-          <div class="white_box_tittle ">
-            <div class="main-title2 ">
-              <h4 class="mb-2 nowrap">Translate:</h4>
-              <h5 class="mb-2 nowrap"><?php
-                                      if (isset($result['choices'][0]['text']) == null) {
-                                      } else {
-                                        echo $result['choices'][0]['text'];
-                                      }
-                                      ?></h5>
+        <div class="box_body">
+          <div class="scroll-bar-wrap ">
+            <div class="visible-scroll always-visible scroll-demo ps-container ps-theme-default ps-active-x ps-active-y">
+              <div class="horrizontal_width" style="width: 1800px;">
+                <div class="card_box box_shadow position-relative mb_30">
+                  <div class="white_box_tittle ">
+                    <div class="main-title2 ">
+                      <h4 class="mb-2 nowrap">Translate:</h4>
+                      <h5 class="mb-2 nowrap"><?php
+                                              if (isset($result['choices'][0]['text']) == null) {
+                                              } else {
+                                                echo $result['choices'][0]['text'];
+                                              }
+                                              ?></h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 

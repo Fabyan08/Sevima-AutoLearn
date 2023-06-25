@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 24 Jun 2023 pada 20.02
+-- Waktu pembuatan: 25 Jun 2023 pada 03.05
 -- Versi server: 10.4.22-MariaDB
 -- Versi PHP: 8.1.2
 
@@ -38,9 +38,13 @@ CREATE TABLE `tanya` (
 --
 
 INSERT INTO `tanya` (`id_tanya`, `pesan`, `tanggal`) VALUES
-(221, 'cara membuang nasi putih', '2023-06-24'),
-(222, 'buatkan saya 1 paragraf tentang deskripsi buah apel', '2023-06-24'),
-(223, 'buatkan saya 1 paragraf tentang deskripsi buah apel', '2023-06-24');
+(244, 'cara makan iga sapi', '2023-06-25'),
+(245, 'cara makan iga sapi', '2023-06-25'),
+(246, 'cara makan iga sapi', '2023-06-25'),
+(247, 'cara menjadi siswa teladan', '2023-06-25'),
+(248, 'cara menjadi siswa yang teladan', '2023-06-25'),
+(249, 'Siapa presiden Indonesia saat ini?', '2023-06-25'),
+(250, 'Siapa presiden Indonesia saat ini?', '2023-06-25');
 
 -- --------------------------------------------------------
 
@@ -64,10 +68,10 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `username`, `nama`, `email`, `no_hp`, `password`, `gambar`, `level`) VALUES
-(4, 'fabyan', 'fabyan', 'fabyan@gmail.com', '081290192912', '08186241cdc503842859a3bbbf51ca65', '', 'admin'),
-(5, '', 'fab', '', '', 'd41d8cd98f00b204e9800998ecf8427e', 'user.jpg', 'siswa'),
-(6, 'fab', 'anjayyy', 'fab@gmail.com', '0812912821', '79193aac5d84bc93e3525109a05dc27c', '', 'siswa'),
-(7, 'f', 'kelas', 'f@gmail.com', '021920910', 'dccfde041c72e2ac71b9e9de4195d7e7', '855-user2.jpg', 'siswa');
+(4, 'fabyan', 'fabyan', 'fabyan@gmail.com', '081290192912', '08186241cdc503842859a3bbbf51ca65', 'user.jpg', 'admin'),
+(6, 'fab', 'anjayyy', 'fab@gmail.com', '0812912821', '79193aac5d84bc93e3525109a05dc27c', 'user.jpg', 'siswa'),
+(7, 'f', 'kelas', 'f@gmail.com', '021920910', 'dccfde041c72e2ac71b9e9de4195d7e7', '855-user2.jpg', 'siswa'),
+(8, 'z', 'z', 'z@gmail.com', '08129128291', '839ad0a86347fe9f6b8d16123d098287', '165-user2.jpg', 'siswa');
 
 --
 -- Indexes for dumped tables
@@ -93,13 +97,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT untuk tabel `tanya`
 --
 ALTER TABLE `tanya`
-  MODIFY `id_tanya` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=224;
+  MODIFY `id_tanya` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=251;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_user` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

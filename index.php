@@ -137,7 +137,7 @@ session_start()
                 </li>
               </div>
               <div class="profile_info">
-                <img src="img/client_img.png" alt="#" />
+                <img src="pages/img-user/user.jpg" alt="#" />
                 <div class="profile_info_iner">
                   <div class="profile_author_name">
                     <?php if (isset($_SESSION['nama']) == null) {
@@ -247,12 +247,12 @@ session_start()
           <?php } ?>
         </div>
         <div class="SMS_thumb">
-          <img src="img/staf/1.png" alt />
+          <img src="pages/img-user/user.jpg" alt />
         </div>
       </div>
       <div class="CHATING_SENDER">
         <div class="SMS_thumb">
-          <img src="img/staf/1.png" alt />
+          <img src="pages/img-user/user.jpg" alt />
         </div>
         <div class="SEND_SMS_VIEW">
           <p><?php include('openai.php');
