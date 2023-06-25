@@ -3,7 +3,7 @@
 if (isset($_POST['mapel'])) {
     $ch = curl_init();
     $mapel = 'cari jurnal berbahasa indonesia di internet yang akurat berdasarkan mata pelajaran' . $_POST['mapel'];
-    echo $_POST['mapel'];
+    echo $_POST['mapel'].', pastinya terbaru';
     curl_setopt($ch, CURLOPT_URL, 'https://api.openai.com/v1/completions');
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($ch, CURLOPT_POST, 1);
@@ -23,7 +23,7 @@ if (isset($_POST['mapel'])) {
 
     $headers = array();
     $headers[] = 'Content-Type: application/json';
-    $headers[] = 'Authorization: Bearer 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';
+    $headers[] = 'Authorization: Bearer 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';
     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
     $result = curl_exec($ch);
