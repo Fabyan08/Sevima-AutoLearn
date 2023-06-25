@@ -1,5 +1,7 @@
 # Sevima-AutoLearn
-Sevima AutoLearn
+
+![image](https://raw.githubusercontent.com/Fabyan08/media/main/preview.png)
+
 Auto Learn (AL), aplikasi chat adukasi berbasis website dengan Integrasi API menggunakan AI dari OpenAI adalah solusi inovatif yang memadukan teknologi kecerdasan buatan (AI) dengan platform komunikasi online untuk menciptakan pengalaman belajar interaktif dan personal.
 
 Dengan aplikasi ini, pengguna dapat mengakses platform belajar yang disediakan melalui website dan berinteraksi langsung dengan asisten AI yang didukung oleh OpenAI. Asisten AI ini dirancang untuk memberikan jawaban, informasi, dan penjelasan terkait topik pendidikan yang beragam, mulai dari teman belajar, ilmu pengetahuan, bahasa, referensi jurnal, dan banyak lagi.
